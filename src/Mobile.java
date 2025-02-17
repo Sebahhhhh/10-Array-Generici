@@ -19,5 +19,12 @@
     public String toString() {
         return "Mobile peso=" + peso + ", prezzo=" + prezzo + "";
     }
-}
+    public boolean equals(Object o) {
+        if (o instanceof Mobile) {
+            Mobile m = (Mobile) o;
+            return this.peso == m.peso && this.prezzo == m.prezzo;
+        }
+        return false;
+    }
+ }
 
